@@ -1,0 +1,40 @@
+<div class="modal fade" id="create_team" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content profile">
+      <div class="modal-header">
+        <h2 class="modal-title">Team creation</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="post" action="/create/team" id="teamform">
+          {{ csrf_input }}
+          <div class="form-group">
+            <label for="teamname">Team name</label>
+            <input class="form-control" name="teamname" type="text" id="teamname">
+          </div>
+          <div class="form-group">
+            <label for="teamleader">Teamleader</label>
+            <div class="input-group mb-3">
+                <select class="custom-select" name="teamleader" id="teamleader">
+                    <option selected value="{{ request.user.pk }}">{{ request.user.username|title }}</option>
+                    {% for user in users %}
+                    <option value="{{ user.pk }}">{{ user.username|title }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="teamdes">Team description</label>
+            <textarea class="form-control" name="teamdes" id="teamdes"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer border-top-0">
+        <button type="submit" form="teamform" class=" btn btn-outline-light button-outline">Create</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

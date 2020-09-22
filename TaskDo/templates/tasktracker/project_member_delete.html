@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div>
+  <h2 class="text-center">Delete {{ member_username }} from this project</h2>
+  <form method="post">
+    {{ csrf_input }}
+    <p class="text-center warning">Are you sure you want to delete "{{ projectmember.user_id }}"?</p>
+    <div class="d-flex justify-content-center">
+       <input type="submit" class="btn btn-outline-light button-outline big_button" value="Confirm">
+    </div>
+  </form>
+</div>
+{% endblock content %}

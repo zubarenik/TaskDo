@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<script>
+    function note_edit(){
+        let url = 'edit/' + {{ notes.pk }};
+        window.location = url;
+    };
+    function note_delete(){
+        let url = 'delete/' + {{ notes.pk }};
+        window.location = url;
+    };
+</script>
+<div>
+    <h2 class="text-center">{{ notes.title }}</h2>
+    <div class="note_block">
+        <p class="note_text">{{ notes.text }}</p>
+        {% if not notes.date == None %}
+            <p class="note_text">{{ notes.date }}</p>
+        {% endif %}
+    </div>
+    <div>
+        <a href="#" class="btn btn-outline-light button-outline big_button" onclick="note_edit(); return false;">Edit Note</a>
+        <a href="#" class="btn btn-outline-light button-outline big_button right" onclick="note_delete(); return false;">Delete Note</a>
+    </div>
+</div>
+{% endblock content %}

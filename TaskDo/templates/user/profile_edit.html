@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+
+{%- block scripts -%}
+<script type="text/javascript" src="{{static('js/user_js/avatar.js')}}"></script>
+{% endblock scripts %}
+
+{% block content %}
+<div class="content_box">
+    <h2 class="text-center">Edit profile</h2>
+    <form method="post" enctype="multipart/form-data">
+        {{ csrf_input }}
+        <p>Name* {{ form.first_name }}</p>
+        <p>Email* {{ form.email }}</p>
+        <p>Age {{ form.age }}</p>
+        <p class="gender_field" id="gender_field">
+            Female <input class="checkbox" id="female" name="gender" type="radio" value=False>
+            Мale <input class="checkbox" id="male" name="gender" type="radio" value=True>
+            <input type="button" class="clear-gender" onclick="gender_clear()" value="Clear">
+            <input id="gender" type="hidden" value="{{ form.gender.value() }}">
+        </p>
+        <p id="avatar_label">Profile photo</p>
+        <div id="avatar">{{ form.avatar }}</div>
+        <p class="mar">Description</p> {{ form.description }}
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-outline-light button-outline big_button">Save</button>
+        </div>
+    </form>
+</div>
+{% endblock content %}

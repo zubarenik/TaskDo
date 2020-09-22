@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="content_box">
+  <h2 class="text-center">Edit task</h2>
+  <form method="post">
+    {{ csrf_input }}
+    <p>{{ form.title.label }}* {{ form.title }}</p>
+    <p class="mar">{{ form.description.label }}*</p> {{ form.description }}
+    <div class="d-flex justify-content-center">
+       <button type="submit" class="btn btn-outline-light button-outline big_button">Save</button>
+    </div>
+  </form>
+</div>
+{% endblock content %}

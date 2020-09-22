@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="content_box">
+    <h2 class="text-center">Sign up</h2>
+    <form method="post">
+      {{ csrf_input }}
+      <p>Username* {{ form.username }}</p>
+      <p><small class="small-helptext">{{ form.username.help_text }}</small></p>
+      {% for error in form.username.errors %}
+         <p class="small-decorate warning">{{ error }}</p>
+      {% endfor %}
+      <p>Name* {{ form.first_name }}</p>
+      <p>Email* {{ form.email }}</p>
+      <p>Age {{ form.age }} </p>
+      <p class="gender_field">
+         Female <input class="checkbox" name="gender" type="radio" value=False>
+         Male <input class="checkbox" name="gender" type="radio" value=True>
+      </p>
+      <p>Profile photo {{ form.avatar }}</p><br>
+      <p>Description</p> {{ form.description }}
+      <p>Password* {{ form.password1 }}</p>
+      {% for item in password1_help %}
+          <p><small class="small-helptext">{{ item }}</small></p>
+      {% endfor %}
+      {% for error in form.password1.errors %}
+         <p class="small-decorate warning">{{ error }}</p>
+      {% endfor %}
+      <p>Confirm password* {{ form.password2 }}</p>
+      <p><small class="small-helptext">{{ form.password2.help_text }}</small></p>
+      {% for error in form.password2.errors %}
+         <p class="small-decorate warning">{{ error }}</p>
+      {% endfor %}
+      <div class="d-flex justify-content-center">
+         <button type="submit" class="btn btn-outline-light button-outline big_button">Sign up</button>
+      </div>
+    </form>
+</div>
+{% endblock content %}

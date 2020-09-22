@@ -1,0 +1,46 @@
+{%- block scripts -%}
+<script type="text/javascript" src="{{static('js/tasktracker_js/task.js')}}"></script>
+{% endblock scripts %}
+
+<div class="modal fade" id="create_task" tabindex="-1" role="dialog" onscroll="check_scroll()">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content profile">
+      <div class="modal-header">
+        <h2 class="modal-title">Task creation</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="post">
+          {{ csrf_input }}
+          <div class="form-group">
+            <label for="task_title">Title</label>
+            <input class="form-control" type="text" id="task_title">
+            <div id="task_title_errors"></div>
+          </div>
+          <div class="form-group">
+            <label for="task_description">Description</label>
+            <textarea class="form-control" id="task_description"></textarea>
+            <div id="task_description_errors"></div>
+          </div>
+          <div class="dropdown">
+              <label for="task_assignee" class="task-label" id="task_label">Assignee <a class="task-href" href="#" onclick="assignee_fill_field('{{ request.user.username }}'); return false;">Assign to me</a></label>
+              <input class="form-control" type="text" id="task_assignee" onclick="choose_project_member()" oninput="choose_project_member()" data-toggle="dropdown" autocomplete="off">
+              <label id="task_assignee_title"></label>
+              <div class="dropdown-menu project" id="task_choose_result"></div>
+          </div>
+          <div class="form-group">
+            <label for="task_date">Due date</label>
+            <input class="form-control" type="date" id="task_date">
+            <div id="task_date_errors"></div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer border-top-0">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="task_clear">Close</button>
+        <button type="submit" class=" btn btn-outline-light button-outline" id="task_creation">Create</button>
+      </div>
+    </div>
+  </div>
+</div>

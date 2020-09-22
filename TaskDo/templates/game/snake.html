@@ -1,0 +1,17 @@
+﻿{% extends "index.html" %}
+
+{% block content %}
+<div id="game">
+    <script>
+        const gameoverimg = "{{static('game/images/gameover.png')}}";
+        const appleimg = "{{static('game/images/apple.png')}}";
+        const snakeimg = "{{static('game/images/snake.png')}}";
+        const menuimg = "{{static('game/images/menu.png')}}";
+    </script>
+    <script src="{{static('game/js/phaser.min.js')}}"></script>
+    <script src="{{static('game/js/game.js')}}"></script>
+    <script src="{{static('game/js/menu.js')}}"></script>
+    <script src="{{static('game/js/game_over.js')}}"></script>
+    <script src="{{static('game/js/main.js')}}"></script>
+</div>
+{% endblock %}

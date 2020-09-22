@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+
+{%- block scripts -%}
+<script type="text/javascript" src="{{static('js/tasktracker_js/project.js')}}"></script>
+<script type="text/javascript" src="{{static('js/tasktracker_js/task_edit.js')}}"></script>
+{% endblock scripts %}
+
+{% block content %}
+<h2 class="text-center">{{ task.title }}</h2>
+<div class="project_block">
+    <p class="project_text">{{ task.description }}</p>
+</div>
+<nav>
+    <div class="menu task-detail">
+        <div class="menu-list task-detail">
+            <p>Author: <a href='#' class="project-href" onclick="add_args_author({{ task.owner_id.pk }}, event); return false;">{{ task.owner_id }}</a></p>
+            <p>Assignee: <a href='#' class="project-href" onclick="add_args_author({{ assignee_id }}, event); return false;">{{ task.assignee }}</a></p>
+            <p>Creation date: <nobr class="task_set_date"></nobr></p>
+            <p>Due date: <nobr class="task_set_date"></nobr></p>
+            <input id="check_task_detail" type="hidden" value="1">
+            <input id="task_entry_date" type="hidden" value="{{ task.entry_date }}">
+            <input id="task_close_date" type="hidden" value="{{ task.close_date }}">
+        </div>
+    </div>
+</nav>
+{% endblock content %}

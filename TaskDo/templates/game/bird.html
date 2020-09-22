@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+
+{% block content %}
+<div id="game">
+    
+    <script>
+        const bgimg = "{{static('game/images/bg.png')}}";
+        const birdimg = "{{static('game/images/bird.png')}}";
+        const fgimg = "{{static('game/images/fg.png')}}";
+        const pipeBottomimg = "{{static('game/images/pipeBottom.png')}}";
+        const pipeUpimg = "{{static('game/images/pipeUp.png')}}";
+    </script>
+
+    <canvas id="canvas" width="288" height="512"></canvas>
+
+    <script src="{{static('game/js/game_bird.js')}}"></script>
+</div>
+{% endblock %}

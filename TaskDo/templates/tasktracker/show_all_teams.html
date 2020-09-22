@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<script>
+  function add_args_team(pk){
+    let url = '/team/' + pk;
+    window.location = url;
+  }
+</script>
+<div class="content_box">
+  <div class="row justify-content-center">
+    <button type="button" class="btn btn-outline-light button-outline project-btn" data-toggle="modal" data-target="#create_team" style="display: block; margin: auto;">Create Team</button>
+  </div>
+  <div style="transform: translate(-17%);">
+{% for team in teams %}
+    <div href="/team/{{ team.pk }}" class="project_block" onclick="add_args_team({{ team.pk }}); return false;">
+        <h3 class="project_name">{{ team.name|title }}</h3>
+        <p class="project_text">{{ team.description }}</p>
+    </div>
+{% endfor %}
+  </div>
+</div>
+{% include 'tasktracker/create_team.html' %}
+{% endblock content %}

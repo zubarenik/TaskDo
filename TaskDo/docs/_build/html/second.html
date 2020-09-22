@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Документация разработчика &#8212; TaskDo  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Документация пользователя" href="first.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="id1">
+<h1>Документация разработчика<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="view-for-game">
+<h2>View-функции for game.<a class="headerlink" href="#view-for-game" title="Permalink to this headline">¶</a></h2>
+<p>def game - вывод шаблона игр.</p>
+<p>def snake - вывод шаблона змейки.</p>
+<p>def bird - вывод шаблона птички.</p>
+</div>
+<div class="section" id="search-bar-py">
+<h2>Search_bar.py.<a class="headerlink" href="#search-bar-py" title="Permalink to this headline">¶</a></h2>
+<p>def check_similarity - проверяет идентичность данных.</p>
+<p>def add_search_bar - поисковая строка.</p>
+</div>
+<div class="section" id="static">
+<h2>static.<a class="headerlink" href="#static" title="Permalink to this headline">¶</a></h2>
+<p>Содержит в себе все использумые стили.</p>
+<p>JS, JS for games, css, картинки.</p>
+</div>
+<div class="section" id="tasktracker">
+<h2>tasktracker.<a class="headerlink" href="#tasktracker" title="Permalink to this headline">¶</a></h2>
+<p>Тасктрекер.</p>
+<p>class TasktrackerConfig(AppConfig) - класс Тасктрекер. Основное приложение.</p>
+</div>
+<div class="section" id="tasktracker-chat">
+<h2>tasktracker_chat.<a class="headerlink" href="#tasktracker-chat" title="Permalink to this headline">¶</a></h2>
+<p>Чат.</p>
+<p>class TasktrackerChatConfig(AppConfig) - класс чата Тасктрекера. Приложение.</p>
+</div>
+<div class="section" id="tasktracker-project">
+<h2>tasktracker_project.<a class="headerlink" href="#tasktracker-project" title="Permalink to this headline">¶</a></h2>
+<p>Проекты.</p>
+<p>class TasktrackerProjectConfig(AppConfig) - класс проектов в тасктрекере. Приложение.</p>
+<p>class ProjectTag(models.Model) - модель для тэга.</p>
+<p>class Project(models.Model) - модель для проекта.</p>
+<p>class ProjectMember(models.Model) - модель для участника.</p>
+</div>
+<div class="section" id="tasktracker-task">
+<h2>tasktracker_task.<a class="headerlink" href="#tasktracker-task" title="Permalink to this headline">¶</a></h2>
+<p>Таски.</p>
+<p>class TasktrackerTaskConfig(AppConfig) - класс тасков (задач) в тасктрекере. Приложение.</p>
+<p>class Task(models.Model) - модель для таска (задачи).</p>
+</div>
+<div class="section" id="tasktracker-team">
+<h2>tasktracker_team.<a class="headerlink" href="#tasktracker-team" title="Permalink to this headline">¶</a></h2>
+<p>Команда.</p>
+<p>class TasktrackerTeamConfig(AppConfig) - класс команды в тасктрекере. Приложение.</p>
+<p>class Team(models.Model) - модель команды.</p>
+<p>class TeamMember(models.Model) - модель участника команды.</p>
+</div>
+<div class="section" id="templates">
+<h2>templates.<a class="headerlink" href="#templates" title="Permalink to this headline">¶</a></h2>
+<p>Шаблоны.</p>
+<p>HTML5. Шаблоны для тасктрекера, игр, регистрации, пользователя.</p>
+<p>index.html &amp; base.html - основные шаблоны.</p>
+</div>
+<div class="section" id="user">
+<h2>user.<a class="headerlink" href="#user" title="Permalink to this headline">¶</a></h2>
+<p>Пользователь.</p>
+<p>class UserConfig(AppConfig) - класс пользователя в тасктрекере. Приложение.</p>
+<p>class CustomUser(AbstractUser) - модель пользователя.</p>
+<p>class Invitations(models.Model) - модель приглашения пользователя в команды.</p>
+</div>
+<div class="section" id="user-auth">
+<h2>user_auth.<a class="headerlink" href="#user-auth" title="Permalink to this headline">¶</a></h2>
+<p>Пользователь. Авторизация.</p>
+<p>class UserAuthConfig(AppConfig) - класс авторизации пользователя. Приложение.</p>
+<p>class SignUpView(CreateView) - шаблон для авторизации пользователя.</p>
+</div>
+<div class="section" id="user-notes">
+<h2>user_notes.<a class="headerlink" href="#user-notes" title="Permalink to this headline">¶</a></h2>
+<p>Заметки пользователя.</p>
+<p>class UserNotesConfig(AppConfig) - класс заметок пользователя в тасктрекере. Приложение.</p>
+<p>class Notes(models.Model) - модель для заметок пользователя.</p>
+<p>class NoteDetailView(DetailView) - шаблон (создания) заметок.</p>
+<p>class NoteUpdateView(UpdateView) - шаблон обновленных (исправленных) заметок.</p>
+<p>class NoteDeleteView(DeleteView) - шаблон удаления заметок.</p>
+</div>
+<div class="section" id="user-profile">
+<h2>user_profile.<a class="headerlink" href="#user-profile" title="Permalink to this headline">¶</a></h2>
+<p>class ProfileEditForm(UserChangeForm) - форма изменеия в профиле.</p>
+<p>def custom_validate_password(password) - функция валидности пароля.</p>
+<p>def current_user_profile(request) - функция текущего профиля пользователя.</p>
+<p>def add_project_list(input_project_id) - функция (добавления) создания проекта.</p>
+<p>def another_user_profile(request, pk)  - функция иного/другого профиля пользователя.</p>
+<p>class ProfileEdit(UpdateView) - шаблон изменений в профиле.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">TaskDo</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="first.html">Документация пользователя</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Документация разработчика</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#view-for-game">View-функции for game.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#search-bar-py">Search_bar.py.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#static">static.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tasktracker">tasktracker.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tasktracker-chat">tasktracker_chat.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tasktracker-project">tasktracker_project.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tasktracker-task">tasktracker_task.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tasktracker-team">tasktracker_team.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#templates">templates.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#user">user.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#user-auth">user_auth.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#user-notes">user_notes.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#user-profile">user_profile.</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="first.html" title="previous chapter">Документация пользователя</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Polina Chugunova.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/second.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

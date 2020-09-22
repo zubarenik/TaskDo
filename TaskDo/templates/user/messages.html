@@ -1,0 +1,37 @@
+{%- block scripts -%}
+<script type="text/javascript" src="{{static('js/user_js/messages.js')}}"></script>
+{% endblock scripts %}
+
+<label class="nav-toggle" id="message_nav_toggle" onmouseenter="appear_messages()">
+{% if my_messages|length > 0 %}
+    <div class="icon-message" id="icon_messages"><span class="span"></span><span class=text id="icon_text">{{ my_messages|length }}</span></div>
+{% endif %}
+</label>
+<nav class="messages-nav" id="message_nav" onmouseleave="hide_messages()">
+    <label class="clip" id="clip" onclick="fasten_messages()"><div id="clip_tooltip"></div></label>
+    <h3 class="text-center">Messages</h3>
+    {% if messages is defined %}
+        <div id="message_body">
+            <div id="messages_list">
+                {% for message in my_messages %}
+                    <div class="message-block" onclick="open_message(event, '{{ message.role }}', '{{ message.text }}', {{ message.invite_pk }})">
+                        <h3 class="message-name">{{ message.title }}</h3>
+                        <p class="message-text">Inviter: <a href="#" class="check-url" onclick="add_inviter({{ message.inviter_pk }})">{{ message.inviter_name }}</a></p>
+                        <p class="message-text">
+                            {% if message.is_project %}
+                                Project:
+                                <a href="#" class="check-url" onclick="add_project({{ message.object_pk }})">{{ message.object_title }}</a>
+                            {% else %}
+                                Team:
+                                <a href="#" class="check-url" onclick="add_team({{ message.object_pk }})">{{ message.object_title }}</a>
+                            {% endif %}
+                        </p>
+                    </div>
+                {% endfor %}
+                {% if my_messages|length == 0 %}
+                    <p class="no-new-message">No new messages</p>
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+</nav>

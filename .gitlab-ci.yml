@@ -1,0 +1,17 @@
+image: "python:latest"
+
+cache:
+  paths:
+    - ~/.cache/pip/
+
+stages:
+  - test
+
+
+before_script:
+  - "pip install -r requirements.txt"
+  - "cd TaskDo"
+unittest:
+  stage: test
+  script:
+    - "python manage.py test"

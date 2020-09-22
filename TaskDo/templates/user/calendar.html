@@ -1,0 +1,27 @@
+{%- block scripts -%}
+<script type="text/javascript" src="{{static('js/user_js/calendar.js')}}"></script>
+{% endblock scripts %}
+
+<div class="calendar">
+    <div class="top-line" id="calendar_header">
+        <button class="top-line left" onclick="previousMonth()"> < </button>
+        <h3><nobr id="month"></nobr> <nobr id="year"></nobr></h3>
+        <button class="top-line right" onclick="nextMonth()"> > </button>
+    </div>
+    <ul class="weekdays">
+        <li class="weekdays">Sunday</li>
+        <li class="weekdays">Monday</li>
+        <li class="weekdays">Tuesday</li>
+        <li class="weekdays">Wednesday</li>
+        <li class="weekdays">Thursday</li>
+        <li class="weekdays">Friday</li>
+        <li class="weekdays">Saturday</li>
+    </ul>
+    <ul class="days" id="line_one"></ul>
+    <ul class="days" id="line_two"></ul>
+    <ul class="days" id="line_three"></ul>
+    <ul class="days" id="line_four"></ul>
+    <ul class="days" id="line_five"></ul>
+    <ul class="days" id="line_six"></ul>
+    <div class="event-preview" id="event_preview"></div>
+</div>

@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="content_box">
+  <h2 class="text-center">{{ member_username }}</h2>
+  <form method="post">
+    {{ csrf_input }}
+    <p>{{ form.role.label }}* {{ form.role }}</p>
+    <div class="d-flex justify-content-center">
+       <button type="submit" class="btn btn-outline-light button-outline big_button">Save</button>
+    </div>
+  </form>
+</div>
+{% endblock content %}

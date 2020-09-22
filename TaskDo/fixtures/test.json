@@ -1,0 +1,34 @@
+[
+{
+    "model": "user.customuser",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$120000$ZGeGNx1k9Mmq$a04bYO5Rq6uVZfIUCUP1IaHN0JMR5PK0jThoXe0oSlQ=",
+        "last_login": "2019-05-05T13:04:35.023Z",
+        "is_superuser": true,
+        "username": "user",
+        "first_name": "",
+        "last_name": "",
+        "email": "f@yandex.ru",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2019-05-05T13:04:06.556Z",
+        "age": null,
+        "gender": null,
+        "description": null,
+        "projects_amount": null,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "user_notes.notes",
+    "pk": 1,
+    "fields": {
+        "user_id": 1,
+        "title": "ret",
+        "text": "4w35",
+        "date": "2019-05-19"
+    }
+}
+]

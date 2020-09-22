@@ -1,0 +1,126 @@
+{% extends 'index.html' %}
+
+{%- block scripts -%}
+<script type="text/javascript" src="{{static('js/user_js/profile.js')}}"></script>
+{% endblock scripts %}
+
+{% block content %}
+{% if not foreign %}
+<div class="portfolio my">
+{% else %}
+<div class="portfolio">
+{% endif %}
+    <div class="d-block px-3 py-3">
+        <div class="bio-image float-left">
+            {% if data.avatar %}
+                <img src="{{ data.avatar.url }}"  alt="image">
+            {% else %}
+                <img src="{{static('user/default_avatar.png')}}"/>
+            {% endif %}
+        </div>
+        <div class="row">
+            <h2>&nbsp{{ data.username }}</h2>
+            {% if not data.gender == None %}
+                {% if data.gender == "Male" %}
+                    <h2 class="text-primary">&#9794;</h2>
+                {% endif %}
+                {% if data.gender == "Female" %}
+                    <h2 class="text-danger">&#9792;</h2>
+                {% endif %}
+            {% endif %}
+        </div>
+        <div class="row">
+        <p>&nbsp
+            {% if not data.first_name == None %}
+                {{ data.first_name }}
+            {% endif %}
+            {% if not data.age == None %}
+                {{ data.age }}
+            {% endif %}
+        </p>
+        </div>
+        <div class="row">
+            {% if not data.email == None %}
+                <p>&nbsp&nbsp{{ data.email }}</p>
+            {% endif %}
+        </div>
+        <div class="row">&nbsp</div>
+            {% if not data.description == None %}
+                <p class="description">{{ data.description }}</p>
+            {% endif %}
+            {% if not data.projects_amount == None %}
+                <p>{{ data.projects_amount }}</p>
+            {% endif %}
+        <div class="profile-footer">
+            {% if request.user.pk == pk %}
+                <a href="#" class="btn btn-outline-light button-outline" onclick="add_args({{ request.user.pk }}); return false;">Edit profile</a>
+                <button type="button" class="btn btn-outline-light button-outline" data-toggle="modal" data-target="#change_password">Change password</button>
+                <button type="button" class="btn btn-outline-light button-outline" data-toggle="modal" data-target="#change_username">Change username</button>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="change_password" tabindex="-1" role="dialog" onscroll="check_scroll()">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content profile password">
+      <div class="modal-header">
+        <h2 class="modal-title">Password change</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+            {{ csrf_input }}
+            <div class="form-group">
+                <label for="current_password">Your current password</label>
+                <input type="password" class="form-control" id="current_password">
+                <div id="error_cur"></div>
+            </div>
+            <div class="form-group">
+                <label for="new_password">New password</label>
+                <input type="password" class="form-control" id="new_password">
+                {% for item in password_help %}
+                    <p><small class="small-helptext">{{ item }}</small></p>
+                {% endfor %}
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">Confirm password</label>
+                <input type="password" class="form-control" id="confirm_password">
+                <p><small class="small-helptext">Enter the same password as before, for verification.</small></p>
+                <div id="error_new"></div>
+            </div>
+      </div>
+      <div class="modal-footer border-top-0">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="clear1">Close</button>
+        <button type="button" class="btn btn-outline-light button-outline" id="change_pass">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="change_username" tabindex="-1" role="dialog" onscroll="check_scroll()">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content profile">
+      <div class="modal-header">
+        <h2 class="modal-title">Username change</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+            {{ csrf_input }}
+            <div class="form-group">
+                <label for="new_username">New username</label>
+                <input type="text" class="form-control" id="new_username">
+                <div id="error_name"></div>
+            </div>
+      </div>
+      <div class="modal-footer border-top-0">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="clear2">Close</button>
+        <button type="button" class="btn btn-outline-light button-outline" id="change_name">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

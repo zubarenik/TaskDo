@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="content_box">
+    <h2 class="text-center">Log in</h2>
+    <form method="post">
+      {{ csrf_input }}
+      {% for error in form.non_field_errors() %}
+        <p class="small-decorate warning">{{ error }}</p>
+      {% endfor %}
+      <p>Username* {{ form.username }}</p>
+      <p>Password* {{ form.password }}</p>
+      <a href="{{ url('signup') }}" class="btn btn-outline-light button-outline big_button left">Sign up</a>
+      <button type="submit" class="btn btn-outline-light button-outline big_button right">Log in</button>
+    </form>
+</div>
+{% endblock content %}

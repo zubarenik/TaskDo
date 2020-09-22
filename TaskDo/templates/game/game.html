@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="game_box">
+    <h2 class="text-center">Playground</h2>
+    <h6 class="text-center">This is the place where you can play some games to get some rest from your work</h6>
+    <div class="box">
+        <div class="box-image">
+            <a href="#"><img src="{{static('game/images/snake_icon.jpg')}}"></a>
+        </div>
+        <div class="box-body">
+            <h2>Snake</h2>
+            <p class="text">This is a snake .</p>
+            <a href="{{ url('snake') }}" class="play">Play this game!</a>
+        </div>
+    </div>
+</div>
+{% endblock content %}

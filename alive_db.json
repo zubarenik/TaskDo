@@ -1,0 +1,1898 @@
+[
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "user",
+      "model": "customuser"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "user",
+      "model": "invitations"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "user_notes",
+      "model": "notes"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "tasktracker_project",
+      "model": "project"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "tasktracker_project",
+      "model": "projectmember"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+      "app_label": "tasktracker_project",
+      "model": "projecttag"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+      "app_label": "tasktracker_task",
+      "model": "task"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+      "app_label": "tasktracker_team",
+      "model": "team"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+      "app_label": "tasktracker_team",
+      "model": "teammember"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+      "app_label": "tasktracker_team",
+      "model": "teamnews"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "7okvg05xprydmtgqg0sy350z573tvo2t",
+    "fields": {
+      "session_data": "ZWQ1YzUxOGQ2NGZkZTc0MGJkZTU2MmZlNzhlMjZlMzQ5NGU5NGQ3OTp7Il9hdXRoX3VzZXJfaWQiOiI2IiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJjYWE5NDEwM2Q1N2QzOTE3NDIyMDhmOTUyMDNkODdjYWVjM2EzZTliIn0=",
+      "expire_date": "2019-06-06T14:13:38.233Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "n8tqpnep6k4iho0tt4hp7ktqg72q842x",
+    "fields": {
+      "session_data": "ZWQ1YzUxOGQ2NGZkZTc0MGJkZTU2MmZlNzhlMjZlMzQ5NGU5NGQ3OTp7Il9hdXRoX3VzZXJfaWQiOiI2IiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJjYWE5NDEwM2Q1N2QzOTE3NDIyMDhmOTUyMDNkODdjYWVjM2EzZTliIn0=",
+      "expire_date": "2019-06-07T18:11:54.492Z"
+    }
+  },
+  {
+    "model": "tasktracker_team.team",
+    "pk": 1,
+    "fields": {
+      "name": "Best team",
+      "type": false,
+      "description": "just best team",
+      "rating": null
+    }
+  },
+  {
+    "model": "tasktracker_team.team",
+    "pk": 2,
+    "fields": {
+      "name": "Tutorial Makers",
+      "type": false,
+      "description": "Team for workbook/tutorial projects.",
+      "rating": null
+    }
+  },
+  {
+    "model": "tasktracker_team.team",
+    "pk": 3,
+    "fields": {
+      "name": "SuperMechanics",
+      "type": false,
+      "description": "Team for projects related with equipment.",
+      "rating": null
+    }
+  },
+  {
+    "model": "tasktracker_team.team",
+    "pk": 4,
+    "fields": {
+      "name": "Superchemists",
+      "type": false,
+      "description": "Specialized super team for chemical projects",
+      "rating": null
+    }
+  },
+  {
+    "model": "tasktracker_team.team",
+    "pk": 5,
+    "fields": {
+      "name": "Home Team",
+      "type": false,
+      "description": "Team specialized on projects related with household chores",
+      "rating": null
+    }
+  },
+  {
+    "model": "tasktracker_team.teamnews",
+    "pk": 1,
+    "fields": {
+      "team": 1,
+      "author": 1,
+      "title": "I just created this team",
+      "description": "Congratulations!",
+      "creation_data": "2019-05-23T12:59:21Z"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 4,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 4,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 4,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 4,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 5,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 5,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 5,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 5,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 6,
+      "codename": "add_customuser"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 6,
+      "codename": "change_customuser"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 6,
+      "codename": "delete_customuser"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 6,
+      "codename": "view_customuser"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add invitations",
+      "content_type": 7,
+      "codename": "add_invitations"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change invitations",
+      "content_type": 7,
+      "codename": "change_invitations"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete invitations",
+      "content_type": 7,
+      "codename": "delete_invitations"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view invitations",
+      "content_type": 7,
+      "codename": "view_invitations"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add notes",
+      "content_type": 8,
+      "codename": "add_notes"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change notes",
+      "content_type": 8,
+      "codename": "change_notes"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete notes",
+      "content_type": 8,
+      "codename": "delete_notes"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view notes",
+      "content_type": 8,
+      "codename": "view_notes"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add project",
+      "content_type": 9,
+      "codename": "add_project"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change project",
+      "content_type": 9,
+      "codename": "change_project"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete project",
+      "content_type": 9,
+      "codename": "delete_project"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view project",
+      "content_type": 9,
+      "codename": "view_project"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add project member",
+      "content_type": 10,
+      "codename": "add_projectmember"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change project member",
+      "content_type": 10,
+      "codename": "change_projectmember"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete project member",
+      "content_type": 10,
+      "codename": "delete_projectmember"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view project member",
+      "content_type": 10,
+      "codename": "view_projectmember"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add project tag",
+      "content_type": 11,
+      "codename": "add_projecttag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change project tag",
+      "content_type": 11,
+      "codename": "change_projecttag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete project tag",
+      "content_type": 11,
+      "codename": "delete_projecttag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view project tag",
+      "content_type": 11,
+      "codename": "view_projecttag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can add task",
+      "content_type": 12,
+      "codename": "add_task"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can change task",
+      "content_type": 12,
+      "codename": "change_task"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can delete task",
+      "content_type": 12,
+      "codename": "delete_task"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can view task",
+      "content_type": 12,
+      "codename": "view_task"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "name": "Can add team",
+      "content_type": 13,
+      "codename": "add_team"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "name": "Can change team",
+      "content_type": 13,
+      "codename": "change_team"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "name": "Can delete team",
+      "content_type": 13,
+      "codename": "delete_team"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+      "name": "Can view team",
+      "content_type": 13,
+      "codename": "view_team"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+      "name": "Can add team member",
+      "content_type": 14,
+      "codename": "add_teammember"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+      "name": "Can change team member",
+      "content_type": 14,
+      "codename": "change_teammember"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+      "name": "Can delete team member",
+      "content_type": 14,
+      "codename": "delete_teammember"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+      "name": "Can view team member",
+      "content_type": 14,
+      "codename": "view_teammember"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+      "name": "Can add team news",
+      "content_type": 15,
+      "codename": "add_teamnews"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+      "name": "Can change team news",
+      "content_type": 15,
+      "codename": "change_teamnews"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+      "name": "Can delete team news",
+      "content_type": 15,
+      "codename": "delete_teamnews"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+      "name": "Can view team news",
+      "content_type": 15,
+      "codename": "view_teamnews"
+    }
+  },
+  {
+    "model": "user.customuser",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$120000$YSw5Mxzea112$m96UKpc3Esky9CmzRT+N7BsqHSGScaYRbafsIt7ZgEg=",
+      "last_login": "2019-05-23T14:20:34.253Z",
+      "is_superuser": true,
+      "username": "test",
+      "first_name": "Name de la Test",
+      "last_name": "",
+      "email": "test@te.st",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2019-05-22T19:30:10.661Z",
+      "age": null,
+      "gender": null,
+      "description": "",
+      "projects_amount": null,
+      "avatar": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "user.customuser",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$120000$HGyOufGmQAcz$RijU0MLi4eYeVwWnA3X1GZjFz1gkj0UJcTxr3MOWerA=",
+      "last_login": "2019-05-23T13:44:59.461Z",
+      "is_superuser": false,
+      "username": "undefined_user",
+      "first_name": "Ilya Veselov",
+      "last_name": "",
+      "email": "ilya@yandex.ru",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2019-05-22T19:33:52.388Z",
+      "age": 23,
+      "gender": false,
+      "description": "Haha I'm undefined",
+      "projects_amount": null,
+      "avatar": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "user.customuser",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$120000$b6oKMPzdB6yq$Jr25AaZ11WWH53AmACTYA82uKZRRSTziQWkaekz0Qv8=",
+      "last_login": "2019-05-23T15:04:05.050Z",
+      "is_superuser": false,
+      "username": "superman",
+      "first_name": "Henry Cavill",
+      "last_name": "",
+      "email": "super@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2019-05-22T19:37:42.006Z",
+      "age": null,
+      "gender": null,
+      "description": "I am batman",
+      "projects_amount": null,
+      "avatar": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "user.customuser",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$120000$ID4Nuew00SFt$DfMt7vPGAVotT8TII9hU6iwU+BfXoVniKDcOSnZDh1U=",
+      "last_login": "2019-05-23T14:04:37.942Z",
+      "is_superuser": false,
+      "username": "hazker1337",
+      "first_name": "Secret Information",
+      "last_name": "",
+      "email": "super_secret@yandex.ru",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2019-05-22T19:40:25.632Z",
+      "age": null,
+      "gender": null,
+      "description": "last year hacked pentagon",
+      "projects_amount": null,
+      "avatar": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "user.customuser",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$120000$0KJ1E5gambsm$Wb14TJq9KgUau8L0DLLbMvah21aMffj/mjEcC3Hdu/Y=",
+      "last_login": "2019-05-23T14:11:49.985Z",
+      "is_superuser": false,
+      "username": "britisher",
+      "first_name": "Great Britain",
+      "last_name": "",
+      "email": "united@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2019-05-22T19:43:34.471Z",
+      "age": null,
+      "gender": null,
+      "description": "London is the capital of Great Britain!",
+      "projects_amount": null,
+      "avatar": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "user.customuser",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$120000$DLcmHeSCQmvf$Xje5B9r1PWLxzllZl5ZxdLiJaSIW9Y2g3K7u4H3JW/U=",
+      "last_login": "2019-05-24T18:11:54.485Z",
+      "is_superuser": false,
+      "username": "mango-fruit",
+      "first_name": "Alexander Sandres",
+      "last_name": "",
+      "email": "favourite@mail.ru",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2019-05-22T19:46:00.241Z",
+      "age": null,
+      "gender": null,
+      "description": "I like to eat",
+      "projects_amount": null,
+      "avatar": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "user.invitations",
+    "pk": 1,
+    "fields": {
+      "user": 2,
+      "text": "Hello, I am inviting you for my project! It is awesome, after doing it we will be rich! ",
+      "inviter_id": 6,
+      "project_id": 1,
+      "role": "Guest",
+      "is_read": false
+    }
+  },
+  {
+    "model": "user.invitations",
+    "pk": 2,
+    "fields": {
+      "user": 3,
+      "text": "Hello, I am inviting you for my project! It is about creating map site ",
+      "inviter_id": 6,
+      "project_id": 1,
+      "role": "Guest",
+      "is_read": false
+    }
+  },
+  {
+    "model": "user.invitations",
+    "pk": 3,
+    "fields": {
+      "user": 5,
+      "text": "Hi! Have you ever come across the fact that you come home and there is no food? Help me to protect our fridges!!!!! ",
+      "inviter_id": 6,
+      "project_id": 2,
+      "role": "Guest",
+      "is_read": true
+    }
+  },
+  {
+    "model": "user.invitations",
+    "pk": 4,
+    "fields": {
+      "user": 3,
+      "text": "Help me to help others to understand c++) ",
+      "inviter_id": 1,
+      "project_id": 4,
+      "role": "Guest",
+      "is_read": false
+    }
+  },
+  {
+    "model": "user.invitations",
+    "pk": 5,
+    "fields": {
+      "user": 2,
+      "text": "Hi! Have you ever come across the fact that you come home and there is no food? Help me to protect our fridges!!!! ",
+      "inviter_id": 6,
+      "project_id": 2,
+      "role": "Guest",
+      "is_read": false
+    }
+  },
+  {
+    "model": "user.invitations",
+    "pk": 6,
+    "fields": {
+      "user": 4,
+      "text": "Hi! Have you ever come across the fact that you come home and there is no food? Help me to protect our fridges!!!! ",
+      "inviter_id": 6,
+      "project_id": 2,
+      "role": "Guest",
+      "is_read": true
+    }
+  },
+  {
+    "model": "user.invitations",
+    "pk": 7,
+    "fields": {
+      "user": 1,
+      "text": "Hi! Have you ever come across the fact that you come home and there is no food? Help me to protect our fridges!!!! ",
+      "inviter_id": 6,
+      "project_id": 2,
+      "role": "Guest",
+      "is_read": false
+    }
+  },
+  {
+    "model": "user.invitations",
+    "pk": 8,
+    "fields": {
+      "user": 1,
+      "text": "Help me to create best car! ",
+      "inviter_id": 3,
+      "project_id": 5,
+      "role": "Guest",
+      "is_read": false
+    }
+  },
+  {
+    "model": "user.invitations",
+    "pk": 9,
+    "fields": {
+      "user": 2,
+      "text": "Help me to create best car! ",
+      "inviter_id": 3,
+      "project_id": 5,
+      "role": "Guest",
+      "is_read": false
+    }
+  },
+  {
+    "model": "user.invitations",
+    "pk": 10,
+    "fields": {
+      "user": 4,
+      "text": "Help me to create best car! ",
+      "inviter_id": 3,
+      "project_id": 5,
+      "role": "Guest",
+      "is_read": true
+    }
+  },
+  {
+    "model": "user.invitations",
+    "pk": 11,
+    "fields": {
+      "user": 5,
+      "text": "Useful robot! ",
+      "inviter_id": 6,
+      "project_id": 7,
+      "role": "Guest",
+      "is_read": true
+    }
+  },
+  {
+    "model": "user.invitations",
+    "pk": 12,
+    "fields": {
+      "user": 4,
+      "text": "Useful robot! ",
+      "inviter_id": 6,
+      "project_id": 7,
+      "role": "Guest",
+      "is_read": false
+    }
+  },
+  {
+    "model": "user.invitations",
+    "pk": 13,
+    "fields": {
+      "user": 1,
+      "text": "Useful robot! ",
+      "inviter_id": 6,
+      "project_id": 7,
+      "role": "Guest",
+      "is_read": false
+    }
+  },
+  {
+    "model": "user.invitations",
+    "pk": 14,
+    "fields": {
+      "user": 6,
+      "text": "Help me to help others to learn c++ : ) ",
+      "inviter_id": 1,
+      "project_id": 4,
+      "role": "Guest",
+      "is_read": false
+    }
+  },
+  {
+    "model": "user.invitations",
+    "pk": 15,
+    "fields": {
+      "user": 2,
+      "text": "Join the most important project in chemistry! ",
+      "inviter_id": 3,
+      "project_id": 6,
+      "role": "Guest",
+      "is_read": false
+    }
+  },
+  {
+    "model": "user.invitations",
+    "pk": 16,
+    "fields": {
+      "user": 2,
+      "text": "Help me to create best car! ",
+      "inviter_id": 3,
+      "project_id": 5,
+      "role": "Guest",
+      "is_read": false
+    }
+  },
+  {
+    "model": "user.invitations",
+    "pk": 17,
+    "fields": {
+      "user": 4,
+      "text": "Help me to help others to learn whitespace : ) ",
+      "inviter_id": 1,
+      "project_id": 3,
+      "role": "Guest",
+      "is_read": false
+    }
+  },
+  {
+    "model": "user.invitations",
+    "pk": 18,
+    "fields": {
+      "user": 4,
+      "text": "Help me to help others to learn c++ : ) ",
+      "inviter_id": 1,
+      "project_id": 4,
+      "role": "Guest",
+      "is_read": true
+    }
+  },
+  {
+    "model": "user.invitations",
+    "pk": 19,
+    "fields": {
+      "user": 5,
+      "text": "Help me to help others to learn Whitespace : ) ",
+      "inviter_id": 1,
+      "project_id": 3,
+      "role": "Guest",
+      "is_read": false
+    }
+  },
+  {
+    "model": "user.invitations",
+    "pk": 20,
+    "fields": {
+      "user": 5,
+      "text": "Help me to help others to learn c++ : ) ",
+      "inviter_id": 1,
+      "project_id": 4,
+      "role": "Guest",
+      "is_read": true
+    }
+  },
+  {
+    "model": "user.invitations",
+    "pk": 21,
+    "fields": {
+      "user": 5,
+      "text": "Help me to create best car! ",
+      "inviter_id": 3,
+      "project_id": 5,
+      "role": "Guest",
+      "is_read": true
+    }
+  },
+  {
+    "model": "user.invitations",
+    "pk": 22,
+    "fields": {
+      "user": 5,
+      "text": "Join the most important project in chemistry! ",
+      "inviter_id": 3,
+      "project_id": 6,
+      "role": "Guest",
+      "is_read": false
+    }
+  },
+  {
+    "model": "user_notes.notes",
+    "pk": 1,
+    "fields": {
+      "user_id": 6,
+      "title": "Need to feed my fish",
+      "text": "My fish has not eaten for a year ",
+      "priority": 1,
+      "date": "2019-05-27",
+      "time": null
+    }
+  },
+  {
+    "model": "user_notes.notes",
+    "pk": 2,
+    "fields": {
+      "user_id": 6,
+      "title": "Rewrite documentation",
+      "text": "The whole team is waiting for you to write the documentation! ",
+      "priority": 2,
+      "date": "2019-05-29",
+      "time": null
+    }
+  },
+  {
+    "model": "user_notes.notes",
+    "pk": 3,
+    "fields": {
+      "user_id": 6,
+      "title": "Start preparing",
+      "text": "In September, an important meeting, start getting ready for dismissal........ ",
+      "priority": 1,
+      "date": "2019-06-20",
+      "time": null
+    }
+  },
+  {
+    "model": "user_notes.notes",
+    "pk": 4,
+    "fields": {
+      "user_id": 6,
+      "title": "Relax",
+      "text": "Just have fun, summer isn't endless! ",
+      "priority": 3,
+      "date": "2019-07-25",
+      "time": null
+    }
+  },
+  {
+    "model": "user_notes.notes",
+    "pk": 5,
+    "fields": {
+      "user_id": 1,
+      "title": "Password",
+      "text": "Change password, now it is unsafe ",
+      "priority": 3,
+      "date": "2019-06-28",
+      "time": null
+    }
+  },
+  {
+    "model": "user_notes.notes",
+    "pk": 6,
+    "fields": {
+      "user_id": 1,
+      "title": "Create project",
+      "text": "You need to create school project until it is to late ",
+      "priority": 3,
+      "date": "2019-05-31",
+      "time": null
+    }
+  },
+  {
+    "model": "user_notes.notes",
+    "pk": 7,
+    "fields": {
+      "user_id": 1,
+      "title": "Go to park",
+      "text": "Just relax, project behind))))) ",
+      "priority": 1,
+      "date": "2019-06-11",
+      "time": null
+    }
+  },
+  {
+    "model": "user_notes.notes",
+    "pk": 8,
+    "fields": {
+      "user_id": 1,
+      "title": "Exam!!!!",
+      "text": "Start preparing to math testing in September!!! ",
+      "priority": 3,
+      "date": "2019-06-14",
+      "time": null
+    }
+  },
+  {
+    "model": "user_notes.notes",
+    "pk": 9,
+    "fields": {
+      "user_id": 1,
+      "title": "Learn Whitespace",
+      "text": ":((((((( Really, start learning ",
+      "priority": 2,
+      "date": "2019-09-11",
+      "time": null
+    }
+  },
+  {
+    "model": "user_notes.notes",
+    "pk": 10,
+    "fields": {
+      "user_id": 5,
+      "title": "Contact mango-fruit",
+      "text": "This user invited me, ask about project ",
+      "priority": 3,
+      "date": "2019-05-23",
+      "time": null
+    }
+  },
+  {
+    "model": "user_notes.notes",
+    "pk": 11,
+    "fields": {
+      "user_id": 5,
+      "title": "Hobby",
+      "text": "Join school musical club ",
+      "priority": 2,
+      "date": "2019-06-08",
+      "time": null
+    }
+  },
+  {
+    "model": "user_notes.notes",
+    "pk": 12,
+    "fields": {
+      "user_id": 5,
+      "title": "Learning",
+      "text": "Start learning c++, it is important for beginning ",
+      "priority": 3,
+      "date": "2019-06-28",
+      "time": null
+    }
+  },
+  {
+    "model": "user_notes.notes",
+    "pk": 13,
+    "fields": {
+      "user_id": 5,
+      "title": "Rest a couple of days",
+      "text": "If you worked hard last week, take a rest ",
+      "priority": 1,
+      "date": "2019-07-16",
+      "time": null
+    }
+  },
+  {
+    "model": "user_notes.notes",
+    "pk": 14,
+    "fields": {
+      "user_id": 4,
+      "title": "Learn some injections",
+      "text": "XSS, SSRF, CSRF, SQl. They are useful if you don't want to lose data :) ",
+      "priority": 2,
+      "date": "2019-06-12",
+      "time": null
+    }
+  },
+  {
+    "model": "user_notes.notes",
+    "pk": 15,
+    "fields": {
+      "user_id": 4,
+      "title": "correction",
+      "text": "correct page on your site ",
+      "priority": 1,
+      "date": "2019-05-28",
+      "time": null
+    }
+  },
+  {
+    "model": "user_notes.notes",
+    "pk": 16,
+    "fields": {
+      "user_id": 4,
+      "title": "Relax this day",
+      "text": "Go walking, swimming, talking to people. Feed dog and go jogging ",
+      "priority": 2,
+      "date": "2019-06-01",
+      "time": null
+    }
+  },
+  {
+    "model": "user_notes.notes",
+    "pk": 17,
+    "fields": {
+      "user_id": 4,
+      "title": "exams",
+      "text": "Start preparing to English exam ",
+      "priority": 3,
+      "date": null,
+      "time": null
+    }
+  },
+  {
+    "model": "user_notes.notes",
+    "pk": 19,
+    "fields": {
+      "user_id": 4,
+      "title": "PE exam",
+      "text": "Start jogging if you fail September cross, you will be expelled from school ////  ",
+      "priority": 1,
+      "date": "2019-06-07",
+      "time": null
+    }
+  },
+  {
+    "model": "user_notes.notes",
+    "pk": 20,
+    "fields": {
+      "user_id": 3,
+      "title": "Rename myself",
+      "text": "It seems everyone already knows that Henry Cavill plays superman................... ",
+      "priority": 2,
+      "date": "2019-05-23",
+      "time": null
+    }
+  },
+  {
+    "model": "user_notes.notes",
+    "pk": 21,
+    "fields": {
+      "user_id": 3,
+      "title": "Reread comics",
+      "text": "reread all comics about batman ",
+      "priority": 1,
+      "date": "2019-06-05",
+      "time": null
+    }
+  },
+  {
+    "model": "user_notes.notes",
+    "pk": 22,
+    "fields": {
+      "user_id": 3,
+      "title": "Greatest Battle",
+      "text": "Prepare for a battle with Batman ",
+      "priority": 3,
+      "date": "2019-06-10",
+      "time": null
+    }
+  },
+  {
+    "model": "user_notes.notes",
+    "pk": 23,
+    "fields": {
+      "user_id": 3,
+      "title": "Disguise",
+      "text": "Think up a disguise better than just glasses ",
+      "priority": 3,
+      "date": "2019-05-31",
+      "time": null
+    }
+  },
+  {
+    "model": "user_notes.notes",
+    "pk": 24,
+    "fields": {
+      "user_id": 2,
+      "title": "Job",
+      "text": "Find job ",
+      "priority": 2,
+      "date": null,
+      "time": null
+    }
+  },
+  {
+    "model": "user_notes.notes",
+    "pk": 25,
+    "fields": {
+      "user_id": 2,
+      "title": "Tickets",
+      "text": "Find chip tickets to Japan ",
+      "priority": 2,
+      "date": "2019-06-19",
+      "time": null
+    }
+  },
+  {
+    "model": "user_notes.notes",
+    "pk": 26,
+    "fields": {
+      "user_id": 2,
+      "title": "Cinema",
+      "text": "Go to the cinema, watch new films ",
+      "priority": 1,
+      "date": "2019-06-10",
+      "time": null
+    }
+  },
+  {
+    "model": "user_notes.notes",
+    "pk": 27,
+    "fields": {
+      "user_id": 2,
+      "title": "Dog",
+      "text": "Feed neighbor's dog ",
+      "priority": 3,
+      "date": "2019-06-02",
+      "time": null
+    }
+  },
+  {
+    "model": "user_notes.notes",
+    "pk": 28,
+    "fields": {
+      "user_id": 2,
+      "title": "Responsibility",
+      "text": "Next week you have to look for neighbour's dog. ",
+      "priority": 2,
+      "date": "2019-06-01",
+      "time": null
+    }
+  },
+  {
+    "model": "tasktracker_project.project",
+    "pk": 1,
+    "fields": {
+      "owner_id": 6,
+      "title": "Map Site",
+      "description": "It will be beautiful, useful, convenient site, where you can see the whole world.",
+      "tags": []
+    }
+  },
+  {
+    "model": "tasktracker_project.project",
+    "pk": 2,
+    "fields": {
+      "owner_id": 6,
+      "title": "Food Guard",
+      "description": "This robot will guard your fridge.",
+      "tags": []
+    }
+  },
+  {
+    "model": "tasktracker_project.project",
+    "pk": 3,
+    "fields": {
+      "owner_id": 1,
+      "title": "Whitespace Workbook",
+      "description": "This workbook will help you to learn Whitespace language",
+      "tags": []
+    }
+  },
+  {
+    "model": "tasktracker_project.project",
+    "pk": 4,
+    "fields": {
+      "owner_id": 1,
+      "title": "C++ Workbook",
+      "description": "This workbook will help you to learn C++ language.",
+      "tags": []
+    }
+  },
+  {
+    "model": "tasktracker_project.project",
+    "pk": 5,
+    "fields": {
+      "owner_id": 3,
+      "title": "SUPERmobile",
+      "description": "Like BATmobile, but SUPERmobile!",
+      "tags": []
+    }
+  },
+  {
+    "model": "tasktracker_project.project",
+    "pk": 6,
+    "fields": {
+      "owner_id": 3,
+      "title": "Kryptonite antidote",
+      "description": "Kryptonite antidote creation project",
+      "tags": []
+    }
+  },
+  {
+    "model": "tasktracker_project.project",
+    "pk": 7,
+    "fields": {
+      "owner_id": 6,
+      "title": "DodWalker",
+      "description": "This robot can walk with your dog.",
+      "tags": []
+    }
+  },
+  {
+    "model": "tasktracker_project.projectmember",
+    "pk": 1,
+    "fields": {
+      "user_id": 6,
+      "project_id": 1,
+      "is_in_team": false,
+      "team_id": null,
+      "role": "Owner"
+    }
+  },
+  {
+    "model": "tasktracker_project.projectmember",
+    "pk": 2,
+    "fields": {
+      "user_id": 6,
+      "project_id": 2,
+      "is_in_team": false,
+      "team_id": null,
+      "role": "Owner"
+    }
+  },
+  {
+    "model": "tasktracker_project.projectmember",
+    "pk": 3,
+    "fields": {
+      "user_id": 1,
+      "project_id": 3,
+      "is_in_team": false,
+      "team_id": null,
+      "role": "Owner"
+    }
+  },
+  {
+    "model": "tasktracker_project.projectmember",
+    "pk": 4,
+    "fields": {
+      "user_id": 1,
+      "project_id": 4,
+      "is_in_team": false,
+      "team_id": null,
+      "role": "Owner"
+    }
+  },
+  {
+    "model": "tasktracker_project.projectmember",
+    "pk": 5,
+    "fields": {
+      "user_id": 5,
+      "project_id": 2,
+      "is_in_team": false,
+      "team_id": null,
+      "role": "Guest"
+    }
+  },
+  {
+    "model": "tasktracker_project.projectmember",
+    "pk": 6,
+    "fields": {
+      "user_id": 3,
+      "project_id": 5,
+      "is_in_team": false,
+      "team_id": null,
+      "role": "Owner"
+    }
+  },
+  {
+    "model": "tasktracker_project.projectmember",
+    "pk": 7,
+    "fields": {
+      "user_id": 3,
+      "project_id": 6,
+      "is_in_team": false,
+      "team_id": null,
+      "role": "Owner"
+    }
+  },
+  {
+    "model": "tasktracker_project.projectmember",
+    "pk": 8,
+    "fields": {
+      "user_id": 6,
+      "project_id": 7,
+      "is_in_team": false,
+      "team_id": null,
+      "role": "Owner"
+    }
+  },
+  {
+    "model": "tasktracker_project.projectmember",
+    "pk": 9,
+    "fields": {
+      "user_id": 4,
+      "project_id": 4,
+      "is_in_team": false,
+      "team_id": null,
+      "role": "Guest"
+    }
+  },
+  {
+    "model": "tasktracker_project.projectmember",
+    "pk": 10,
+    "fields": {
+      "user_id": 4,
+      "project_id": 2,
+      "is_in_team": false,
+      "team_id": null,
+      "role": "Guest"
+    }
+  },
+  {
+    "model": "tasktracker_project.projectmember",
+    "pk": 11,
+    "fields": {
+      "user_id": 4,
+      "project_id": 5,
+      "is_in_team": false,
+      "team_id": null,
+      "role": "Guest"
+    }
+  },
+  {
+    "model": "tasktracker_project.projectmember",
+    "pk": 12,
+    "fields": {
+      "user_id": 5,
+      "project_id": 4,
+      "is_in_team": false,
+      "team_id": null,
+      "role": "Guest"
+    }
+  },
+  {
+    "model": "tasktracker_project.projectmember",
+    "pk": 13,
+    "fields": {
+      "user_id": 5,
+      "project_id": 5,
+      "is_in_team": false,
+      "team_id": null,
+      "role": "Guest"
+    }
+  },
+  {
+    "model": "tasktracker_project.projectmember",
+    "pk": 14,
+    "fields": {
+      "user_id": 5,
+      "project_id": 7,
+      "is_in_team": false,
+      "team_id": null,
+      "role": "Guest"
+    }
+  },
+  {
+    "model": "tasktracker_task.task",
+    "pk": 1,
+    "fields": {
+      "owner_id": 6,
+      "project_id": 1,
+      "title": "Main Page",
+      "description": "Create main page with links on page with map and to page with our contacts",
+      "assignee": "mango-fruit",
+      "entry_date": "2019-05-22",
+      "close_date": "2019-05-31"
+    }
+  },
+  {
+    "model": "tasktracker_task.task",
+    "pk": 2,
+    "fields": {
+      "owner_id": 6,
+      "project_id": 2,
+      "title": "Model",
+      "description": "Create model of robot",
+      "assignee": "mango-fruit",
+      "entry_date": "2019-05-22",
+      "close_date": "2019-07-27"
+    }
+  },
+  {
+    "model": "tasktracker_task.task",
+    "pk": 3,
+    "fields": {
+      "owner_id": 1,
+      "project_id": 3,
+      "title": "Learn Whitespace",
+      "description": "Just. Learn. Whitespace. Language.",
+      "assignee": "test",
+      "entry_date": "2019-05-22",
+      "close_date": "2020-10-10"
+    }
+  },
+  {
+    "model": "tasktracker_task.task",
+    "pk": 4,
+    "fields": {
+      "owner_id": 1,
+      "project_id": 4,
+      "title": "Crate main page",
+      "description": "There should be table of content",
+      "assignee": "test",
+      "entry_date": "2019-05-23",
+      "close_date": "2019-06-22"
+    }
+  },
+  {
+    "model": "tasktracker_task.task",
+    "pk": 5,
+    "fields": {
+      "owner_id": 1,
+      "project_id": 4,
+      "title": "Create login page",
+      "description": "User can sign up and sign in, all users have login username, password",
+      "assignee": "test",
+      "entry_date": "2019-05-23",
+      "close_date": "2019-06-08"
+    }
+  },
+  {
+    "model": "tasktracker_task.task",
+    "pk": 6,
+    "fields": {
+      "owner_id": 3,
+      "project_id": 5,
+      "title": "Design",
+      "description": "Think up a design",
+      "assignee": "superman",
+      "entry_date": "2019-05-23",
+      "close_date": "2019-06-08"
+    }
+  },
+  {
+    "model": "tasktracker_task.task",
+    "pk": 7,
+    "fields": {
+      "owner_id": 3,
+      "project_id": 5,
+      "title": "Find engineer",
+      "description": "Need best engineer",
+      "assignee": "superman",
+      "entry_date": "2019-05-23",
+      "close_date": "2019-06-22"
+    }
+  },
+  {
+    "model": "tasktracker_task.task",
+    "pk": 8,
+    "fields": {
+      "owner_id": 3,
+      "project_id": 6,
+      "title": "Find chemis-genius",
+      "description": "To create antidote we need best chemist",
+      "assignee": "superman",
+      "entry_date": "2019-05-23",
+      "close_date": null
+    }
+  },
+  {
+    "model": "tasktracker_task.task",
+    "pk": 9,
+    "fields": {
+      "owner_id": 3,
+      "project_id": 6,
+      "title": "Find lab",
+      "description": "Need a place to experiment",
+      "assignee": "superman",
+      "entry_date": "2019-05-23",
+      "close_date": null
+    }
+  },
+  {
+    "model": "tasktracker_task.task",
+    "pk": 10,
+    "fields": {
+      "owner_id": 6,
+      "project_id": 7,
+      "title": "Dog",
+      "description": "Get a dog.....",
+      "assignee": "mango-fruit",
+      "entry_date": "2019-05-23",
+      "close_date": null
+    }
+  },
+  {
+    "model": "tasktracker_task.task",
+    "pk": 11,
+    "fields": {
+      "owner_id": 6,
+      "project_id": 7,
+      "title": "Model",
+      "description": "Come up with a robot model\n",
+      "assignee": "mango-fruit",
+      "entry_date": "2019-05-23",
+      "close_date": null
+    }
+  },
+  {
+    "model": "tasktracker_task.task",
+    "pk": 12,
+    "fields": {
+      "owner_id": 1,
+      "project_id": 4,
+      "title": "Base operations",
+      "description": "Create start page with lecture about base operations in C++, how to read date, how to print, etc",
+      "assignee": "hazker1337",
+      "entry_date": "2019-05-23",
+      "close_date": "2019-06-29"
+    }
+  },
+  {
+    "model": "tasktracker_task.task",
+    "pk": 13,
+    "fields": {
+      "owner_id": 6,
+      "project_id": 7,
+      "title": "Algorithm",
+      "description": "Develop the basic algorithm",
+      "assignee": "britisher",
+      "entry_date": "2019-05-23",
+      "close_date": "2019-06-04"
+    }
+  },
+  {
+    "model": "tasktracker_team.teammember",
+    "pk": 1,
+    "fields": {
+      "member": 1,
+      "team": 1
+    }
+  },
+  {
+    "model": "tasktracker_team.teammember",
+    "pk": 2,
+    "fields": {
+      "member": 1,
+      "team": 2
+    }
+  },
+  {
+    "model": "tasktracker_team.teammember",
+    "pk": 3,
+    "fields": {
+      "member": 3,
+      "team": 3
+    }
+  },
+  {
+    "model": "tasktracker_team.teammember",
+    "pk": 4,
+    "fields": {
+      "member": 3,
+      "team": 4
+    }
+  },
+  {
+    "model": "tasktracker_team.teammember",
+    "pk": 5,
+    "fields": {
+      "member": 6,
+      "team": 5
+    }
+  }
+]

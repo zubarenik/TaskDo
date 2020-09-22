@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+
+{%- block scripts -%}
+<script type="text/javascript" src="{{static('js/tasktracker_js/project_create.js')}}"></script>
+{% endblock scripts %}
+
+{% block content %}
+<div class="content_box">
+  <h2 class="text-center">Create Project</h2>
+  <form method="post">
+    {{ csrf_input }}
+    <p>Title* <input type="text" name="title" id="project_title"></p>
+    <p class="small-decorate warning" id="project_title_errors"></p>
+    <p>Description*</p>
+    <textarea id="project_description" rows="8" cols="50" id="desc"></textarea>
+    <p class="small-decorate warning" id="project_description_errors"></p>
+    <div class="d-flex justify-content-center">
+      <button type="button" class="btn btn-outline-light button-outline big_button" id="create_project">Create</button>
+    </div>
+  </form>
+</div>
+{% endblock content %}

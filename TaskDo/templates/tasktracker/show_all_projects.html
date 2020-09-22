@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+
+{%- block scripts -%}
+<script type="text/javascript" src="{{static('js/tasktracker_js/project.js')}}"></script>
+{% endblock scripts %}
+
+{% block content %}
+<div>
+{% for project in projects %}
+    <div class="project_block" onclick="add_args_project(event, {{ project.pk }})">
+        <h3 class="project_name">{{ project.title|title }}</h3>
+        {% if project.tags.all() %}
+        <div class="project-info">
+            {% for tag in project.tags.all() %}
+            <div class="project-info-item">{{ tag.name|title }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        <p class="project_text">Created by <a href='#' class="project-href" onclick="add_args_author({{ project.owner_id.pk }}, event); return false;">{{ project.owner_id }}</a></p>
+    </div>
+{% endfor %}
+
+{% if projects|length == 0 %}
+    <h3 class="project_name" style="color: #A747F8; font-size: 25px">You haven't any projects :(</h3>
+    <h3 class="project_name" style="color: #A747F8; font-size: 25px">Maybe <a href="{{ url('create_project') }}" class="check-url">create</a>?</h3>
+{% endif %}
+</div>
+{% endblock content %}

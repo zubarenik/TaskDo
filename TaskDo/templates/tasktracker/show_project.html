@@ -1,0 +1,53 @@
+{% extends 'index.html' %}
+
+{%- block scripts -%}
+<script type="text/javascript" src="{{static('js/tasktracker_js/project.js')}}"></script>
+<script type="text/javascript" src="{{static('js/tasktracker_js/project_switch.js')}}"></script>
+{% endblock scripts %}
+
+{% block content %}
+<div>
+<h2 class="text-center">{{ project_title|title }}</h2>
+<div class="project_block" style="background-color: #302B36">
+    <p class="project_text">{{ project_description }}</p>
+</div>
+<input type="hidden" id="project_id" value="{{ project_id }}">
+{% if role != 'Guest' and role != 'Philistine' and role != None %}
+    {% include 'tasktracker/invite_to_project.html' %}
+{% endif %}
+{% if role != 'Guest' and role != None %}
+    {% include 'tasktracker/create_task.html' %}
+{% endif %}
+
+<nav>
+    <div class="menu task-detail">
+        <div class="menu-list task-detail">
+            <button type="button" class="btn btn-outline-light button-outline project-btn" id="project_switch_button" onclick="projectSwitch('{{ role }}')">Members</button>
+            {% if role != 'Guest' and role != None %}
+            {% if role != 'Philistine' %}
+            <button type="button" class="btn btn-outline-light button-outline project-btn" data-toggle="modal" data-target="#project_invite">Invite</button>
+            {% endif %}
+            <button type="button" class="btn btn-outline-light button-outline project-btn" data-toggle="modal" data-target="#create_task">Create task</button>
+            {% endif %}
+        </div>
+    </div>
+</nav>
+
+<div id="project_switch_output">
+{% for task in tasks %}
+    <div class="project_block" onclick="add_args_task(event, {{ project_id }}, {{ task.pk }})">
+        <h3 class="project_name">{{ task.title }}</h3>
+        <p class="project_text">
+            <nobr id="set_project_task_entry_date"></nobr>
+            <input id="check_task_detail" type="hidden" value="0">
+            <input id="project_task_entry_date" type="hidden" value="{{ task.entry_date }}">
+            by <a href='#' class="project-href" onclick="add_args_author({{ task.owner_id.pk }}, event); return false;">{{ task.owner_id }}</a>
+        </p>
+    </div>
+{% endfor %}
+{% if tasks|length == 0 %}
+    <h3 class="text-center" style="color: #A747F8; font-size: 25px">There aren't any tasks in this project :(</h3>
+{% endif %}
+</div>
+</div>
+{% endblock content %}

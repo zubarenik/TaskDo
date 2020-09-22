@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block page_template %}
+<header class="navbar navbar-expand-lg navbar-dark navigation sticky-top">
+  <a class="navbar-brand navigation-logo-name ml-2" href="/">TaskDo</a>
+  <div class="collapse navbar-collapse align-self-end">
+    <ul class="navbar-nav">
+       <li class="nav-item dropdownmenu" id="projects">
+         <a class="nav-link">Projects</a>
+         <ul class="dropdownmenu-list" data-target="#projects">
+           <li href="{{ url('create_project') }}">Create</li>
+           <li href="{{ url('show_all_project') }}">List</li>
+         </ul>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="{{ url('game') }}">Game</a>
+       </li>
+        <li class="nav-item">
+         <a class="nav-link" href="{{ url('faq') }}">FAQ</a>
+       </li>
+    </ul>
+  </div>
+
+  <div class="dropdown search-bar">
+    {{ csrf_input }}
+    <input class="form-control mr-sm-2" id="search_name" placeholder="Let's find user!" onclick="search_user()" oninput="search_user()" data-toggle="dropdown" autocomplete="off">
+    <div class="dropdown-menu search-result " id="search_result"></div>
+  </div>
+
+  {% if request.user.is_authenticated %}
+  <div class="block_inline dropdown">
+    <a class="btn btn-outline-light button-outline dropdown-toggle" role="button" id="user_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{ request.user.username }}
+    </a>
+    <div class="dropdown-menu dropdown-menu-right user-dropdown" aria-labelledby="user_dropdown">
+        <a class="dropdown-item user-dropdown-item" href="{{ url('profile') }}">Profile</a>
+        <a class="dropdown-item user-dropdown-item" href="{{ url('logout') }}">Log out</a>
+    </div>
+  </div>
+  {% else %}
+  <div class="block-inline">
+    <a class="btn btn-outline-light button-outline" href="{{ url('login') }}" role="button">Sign in</a>
+  </div>
+  {% endif %}
+</header>
+
+{% if sidebar is defined %}
+<nav>
+    <div class="menu">
+        <h3 class="menu-title">Menu</h3>
+        <ul class="menu-list">
+            {% for menu_item in sidebar %}
+                {% if menu_item.url_args %}
+                <li><a class="origin" href="{{ menu_item.url }}">{{menu_item.name}}</a></li>
+                {% else %}
+                <li><a class="origin" href="{{ url(menu_item.url) }}">{{menu_item.name}}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+</nav>
+{% endif %}
+
+{% if messages %}
+<div class="alert alert-danger alert-dismissible fade show login_messages" role="alert" id="login_messages">
+    {% for message in messages %}
+        <strong>{{ message }}</strong>
+    {% endfor %}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{% endif %}
+
+<main class="content_menu">
+{% if sidebar is defined %}
+    <main class="content">
+{% endif %}
+    {% block content %}{% endblock content %}
+    </main>
+</main>
+
+{% endblock page_template %}

@@ -1,0 +1,70 @@
+{% extends 'index.html' %}
+
+{%- block scripts -%}
+<script type="text/javascript" src="{{static('js/user_js/note.js')}}"></script>
+{% endblock scripts %}
+
+{% block content %}
+<div class="user-content">
+    {% include 'user/calendar.html' %}
+    {% include 'user/messages.html' %}
+    
+    <button type="button" class="btn btn-outline-light button-outline big_button create-btn" data-toggle="modal" data-target="#create_note">Create note</button>
+    <div class="modal fade" id="create_note" tabindex="-1" role="dialog" onscroll="check_scroll()">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content profile">
+          <div class="modal-header">
+            <h2 class="modal-title">Note creation</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form method="post">
+              {{ csrf_input }}
+              <input id="user_id" value="{{ request.user.pk }}" type="hidden">
+              <div class="form-group">
+                <label for="note_title">Title</label>
+                <input type="text" class="form-control" id="note_title">
+                <div id="note_error_title"></div>
+              </div>
+              <div class="form-group">
+                <label for="note_text">Text</label>
+                <textarea class="form-control" id="note_text"></textarea>
+                <div id="note_error_text"></div>
+              </div>
+              <div class="form-group">
+                <label for="note_priority">Set priority</label>
+                <input type="number" min="1" max="3" value="1" class="form-control" id="note_priority">
+                <p><small class="small-helptext">1 - low priority; 2 - medium priority; 3 - high priority</small></p>
+                <div id="note_error_priority"></div>
+              </div>
+              <div class="form-group" id="note_date_field">
+                <label for="note_date">Date</label>
+                <input type="date" class="form-control" id="note_date" onchange="processingTimeField()">
+              </div>
+              <div class="form-group" style="display: none" id="note_time_field">
+                <label for="note_time">Time</label>
+                <input type="time" class="form-control" id="note_time">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer border-top-0">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="note_clear">Close</button>
+            <button type="submit" class=" btn btn-outline-light button-outline" id="create_note_button">Create</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="note-list">
+    {% for note in notes %}
+        {% if note.date == None %}
+            <div class="note_block" onclick="addArgsNote({{ note.pk }})">
+              <h3 class="note_name">{{ note.title }}</h3>
+            </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+</div>
+{% endblock content %}
